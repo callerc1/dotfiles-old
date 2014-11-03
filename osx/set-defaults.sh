@@ -28,7 +28,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 sudo pmset -a standbydelay 86400
 
 # Disable the sound effects on boot
-sudo nvram SystemAudioVolume=" "
+#sudo nvram SystemAudioVolume=" "
 
 # Menu bar: set the date format
 defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  HH:mm:ss"
@@ -39,8 +39,8 @@ defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 # Menu bar: hide the Time Machine, Volume, User, and Bluetooth icons
 for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
     defaults write "${domain}" dontAutoLoad -array \
-        "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
-        "/System/Library/CoreServices/Menu Extras/Volume.menu" \
+        #"/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
+        #"/System/Library/CoreServices/Menu Extras/Volume.menu" \
         "/System/Library/CoreServices/Menu Extras/User.menu"
 done
 defaults write com.apple.systemuiserver menuExtras -array \
@@ -56,7 +56,7 @@ defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.5
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 
 # Always show scrollbars
-defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+# defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
 
 # Disable smooth scrolling
@@ -137,7 +137,7 @@ sudo touch /Private/var/vm/sleepimage
 sudo chflags uchg /Private/var/vm/sleepimage
 
 # Disable the sudden motion sensor as it’s not useful for SSDs
-sudo pmset -a sms 0
+sudo pmset -a sms 1
 
 
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input
@@ -232,23 +232,21 @@ defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
 defaults write com.apple.DiskUtility advanced-image-options -bool true
 
 
-# Alfred
+# Alfred # NOT WORKING
 ###############################################################################
 
-# Set double tap of command key as the shortcut
-defaults write com.runningwithcrayons.Alfred-Preferences hotkey.default -dict-add key -1
-defaults write com.runningwithcrayons.Alfred-Preferences hotkey.default -dict-add mod 1048576
-defaults write com.runningwithcrayons.Alfred-Preferences hotkey.default -dict-add string "double tap"
+# Set default command key as the shortcut
+# defaults write ~/Library/Application\ Support/Alfred\ 2/Alfred.alfredpreferences/preferences/appearance/options/prefs.plist hidehat -bool true
 
-# Hide his hat and menu icon
-defaults write ~/Library/Application\ Support/Alfred\ 2/Alfred.alfredpreferences/preferences/appearance/options/prefs.plist hidehat -bool true
-defaults write ~/Library/Application\ Support/Alfred\ 2/Alfred.alfredpreferences/preferences/appearance/options/prefs.plist hidemenu -bool true
+# # Hide his hat and menu icon
+# defaults write ~/Library/Application\ Support/Alfred\ 2/Alfred.alfredpreferences/preferences/appearance/options/prefs.plist hidehat -bool true
+# defaults write ~/Library/Application\ Support/Alfred\ 2/Alfred.alfredpreferences/preferences/appearance/options/prefs.plist hidemenu -bool true
 
-# Set location to the UK
-defaults write ~/Library/Application\ Support/Alfred\ 2/Alfred.alfredpreferences/preferences/prefs.plist location -string "United Kingdom"
+# # Set location to the UK
+# defaults write ~/Library/Application\ Support/Alfred\ 2/Alfred.alfredpreferences/preferences/prefs.plist location -string "United Kingdom"
 
-# Alfred prefs
-defaults write com.runningwithcrayons.Alfred-Preferences appearance.theme -string "alfred.theme.lightlarge"
+# # Alfred prefs
+# defaults write com.runningwithcrayons.Alfred-Preferences appearance.theme -string "alfred.theme.lightlarge"
 
 
 
@@ -261,7 +259,7 @@ defaults write com.runningwithcrayons.Alfred-Preferences appearance.theme -strin
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
 # Set the icon size of Dock items to 36 pixels
-defaults write com.apple.dock tilesize -int 36
+defaults write com.apple.dock tilesize -int 16
 
 # Change minimize/maximize window effect
 defaults write com.apple.dock mineffect -string "scale"
@@ -288,13 +286,13 @@ defaults write com.apple.dock expose-animation-duration -float 0.1
 
 # Don’t group windows by application in Mission Control
 # (i.e. use the old Exposé behavior instead)
-defaults write com.apple.dock expose-group-by-app -bool false
+defaults write com.apple.dock expose-group-by-app -bool true
 
 # Disable Dashboard
-defaults write com.apple.dashboard mcx-disabled -bool true
+defaults write com.apple.dashboard mcx-disabled -bool false
 
 # Don’t show Dashboard as a Space
-defaults write com.apple.dock dashboard-in-overlay -bool true
+defaults write com.apple.dock dashboard-in-overlay -bool false
 
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
@@ -317,7 +315,7 @@ defaults write com.apple.dock hide-mirror -bool true
 find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
 
 # Add iOS Simulator to Launchpad
-sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone Simulator.app" "/Applications/iOS Simulator.app"
+sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app" "/Applications/iOS Simulator.app"
 
 # Add a spacer to the left side of the Dock (where the applications are)
 #defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
@@ -424,14 +422,14 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
 # Increase grid spacing for icons on the desktop and in other icon views
-/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:gridSpacing 100" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:gridSpacing 100" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:gridSpacing 100" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:gridSpacing 50" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:gridSpacing 50" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:gridSpacing 50" ~/Library/Preferences/com.apple.finder.plist
 
 # Increase the size of icons on the desktop and in other icon views
-/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:iconSize 80" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:iconSize 80" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:iconSize 80" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:iconSize 32" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:iconSize 32" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:iconSize 32" ~/Library/Preferences/com.apple.finder.plist
 
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
@@ -534,8 +532,8 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-# Save screenshots to the desktop
-defaults write com.apple.screencapture location -string "${HOME}/Desktop"
+# Save screenshots to dropbox
+defaults write com.apple.screencapture location -string "${HOME}/Dropbox/Screenshots"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
@@ -587,8 +585,8 @@ sudo mdutil -E / > /dev/null
 ###############################################################################
 
 # Install my Sublime Text preference file
-cp -r ../sublime/User/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
-
+# cp -r ../sublime/User/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
+# maybe sync this via dropbox in future?
 
 # Terminal & iTerm 2
 ###############################################################################
@@ -600,8 +598,8 @@ chsh -s /bin/zsh
 defaults write com.apple.terminal StringEncodings -array 4
 
 # Use the Pro theme by default in Terminal.app
-defaults write com.apple.Terminal "Default Window Settings" -string 'Pro'
-defaults write com.apple.Terminal "Startup Window Settings" -string 'Pro'
+defaults write com.apple.Terminal "Default Window Settings" -string 'IR_Black'
+defaults write com.apple.Terminal "Startup Window Settings" -string 'IR_Black'
 
 # Use zsh at start up in Terminal.app
 defaults write com.apple.Terminal "Shell" -string '/bin/zsh'
@@ -632,8 +630,8 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "Alfred" "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
-    "Dock" "Finder" "Mail" "Messages" "Safari" "SizeUp" "SystemUIServer" \
+for app in "Alfred 2" "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
+    "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
     "Terminal" "Transmission" "Twitter" "iCal"; do
     killall "${app}" > /dev/null 2>&1
 done
