@@ -10,6 +10,12 @@ then
   source ~/.profile
 fi
 
+# check for rbenv
+if [[ -a ~/.rbenv ]]
+then
+  eval "$(rbenv init -)"
+fi
+
 
 # Base16 Shell
 # BASE16_SHELL="$DOTFILES/zsh/base16-ocean.dark.sh"
