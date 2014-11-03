@@ -1,3 +1,7 @@
+# shortcut to this dotfiles path is $DOTFILES
+export DOTFILES=$HOME/.dotfiles
+export VENDOR=$DOTFILES/vendor
+
 [ -n "$PS1" ] && source ~/.bash_profile
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
