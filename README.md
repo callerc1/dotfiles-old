@@ -1,4 +1,4 @@
-# Jamie ❤ ~/
+# Chris ❤ ~/
 
 Dotfiles are all those files beginning with a "." in your user directory and make your system (particularly anything to do with the command line) work and look the way you want it.
 
@@ -6,10 +6,10 @@ Dotfiles are all those files beginning with a "." in your user directory and mak
 ## Installation
 
 ### Using Git and the bootstrap script
-You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`).
+You can clone the repository wherever you want.
 
 ```sh
-git clone https://github.com/jppferguson/dotfiles.git ~/.dotfiles
+git clone https://github.com/callerc1/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 ```
@@ -21,7 +21,7 @@ The main file you'll want to change right off the bat is `zsh/zshrc.symlink`,
 which sets up a few paths that'll be different on your particular machine.
 
 `dot` installs some dependencies, sets sane OS X defaults, and so on.
-Tweak this script, and occasionally run `dot` from time to time to keep 
+Tweak this script, and occasionally run `dot` from time to time to keep
 your environment fresh and up-to-date. You can find this script in `bin/`.
 
 
@@ -30,7 +30,7 @@ your environment fresh and up-to-date. You can find this script in `bin/`.
 To install these dotfiles without Git:
 
 ```bash
-cd; curl -#L https://github.com/jppferguson/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md}
+cd; curl -#L https://github.com/callerc1/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md}
 script/bootstrap
 ```
 
