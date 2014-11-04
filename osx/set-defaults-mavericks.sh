@@ -13,7 +13,7 @@
 
 
 # Ask for the administrator password upfront
-sudo -v
+sudo -v 
 
 # Keep-alive: update existing `sudo` time stamp until we're done
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
@@ -127,7 +127,7 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 sudo tmutil disablelocal
 
 # Disable hibernation (speeds up entering sleep mode)
-sudo pmset -a hibernatemode 0
+sudo pmsret -a hibernatemode 0
 
 # Remove the sleep image file to save disk space
 sudo rm /Private/var/vm/sleepimage
