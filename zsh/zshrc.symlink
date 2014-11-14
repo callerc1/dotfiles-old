@@ -2,6 +2,9 @@
 export DOTFILES=$HOME/.dotfiles
 export VENDOR=$DOTFILES/vendor
 
+# Specify homebrew cask defaults
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 # check for RVM
 if [[ -a ~/.rvm ]]
 then
