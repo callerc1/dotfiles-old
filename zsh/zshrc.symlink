@@ -2,6 +2,10 @@
 export DOTFILES=$HOME/.dotfiles
 export VENDOR=$DOTFILES/vendor
 
+# Reset Path
+PATH=/usr/bin:/bin:/usr/sbin:/sbin
+export PATH
+
 # Specify homebrew cask defaults
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
@@ -14,10 +18,10 @@ then
 fi
 
 # check for rbenv
-if [[ -a ~/.rbenv ]]
-then
-  eval "$(rbenv init -)"
-fi
+#if [[ -a ~/.rbenv ]]
+#then
+#  eval "$(rbenv init -)"
+#fi
 
 
 # Base16 Shell
@@ -48,12 +52,17 @@ config_files=($DOTFILES/(**|^vendor)/*.zsh)
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}
 do
+  #echo "just path :  $file"
   source $file
 done
 
-# load everything but the path and completion files
-for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
+# include bash aliases (overridden by any ohmyzsh plugins and other aliases)
+. ~/.aliases
+
+# load everything but the path, completion and aliases files
+for file in ${${${config_files:#*/path.zsh}:#*/completion.zsh}:#*/aliases.zsh}
 do
+  #echo "*.zsh :  $file"
   source $file
 done
 
@@ -64,14 +73,16 @@ compinit
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
 do
+  #echo "just completion :  $file"
   source $file
+done
 
+# load all the aliases
+for file in ${(M)config_files:#*/aliases.zsh}
+do
+  #echo "just aliases :  $file"
+  source $file
 done
 
 unset config_files
-
-
-
-# include bash aliases
-. ~/.aliases
 
