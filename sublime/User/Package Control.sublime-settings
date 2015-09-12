@@ -1,8 +1,12 @@
 {
 	"auto_upgrade_last_run": null,
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
 		"Alignment",
+		"Ansible",
 		"CodeFormatter",
 		"CoffeeScript",
 		"Dayle Rees Color Schemes",
@@ -15,6 +19,7 @@
 		"Git",
 		"GitGutter",
 		"Jade",
+		"Jinja2",
 		"jQuery",
 		"LESS",
 		"LESS-build",

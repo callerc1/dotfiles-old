@@ -31,6 +31,13 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"Sublimerge Pro",
+		"jQuery",
+		"TernJS",
+		"UIkit autocomplete",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"Modific"
 	],
 	"indent_to_bracket": false,
 	"match_brackets_angle": true,
