@@ -1,2 +1,2 @@
 
-alias composer="composer.phar"
+#alias composer="composer.phar"
