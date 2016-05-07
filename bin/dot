@@ -5,10 +5,8 @@
 # `dot` handles installation, updates, things like that. Run it periodically
 # to make sure you're on the latest and greatest.
 
-# Set OS X defaults
-echo "\nSetting OS X defaults...";
-$DOTFILES/osx/set-defaults-yosemite.sh
-
-# Upgrade homebrew
-echo "\nUpgrading homebrew...";
-brew update
+if [ "$1" = "" ] ; then
+  $DOTFILES/script/update
+else
+  $DOTFILES/script/update $@
+fi

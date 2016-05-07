@@ -1,16 +1,20 @@
 {
+	"align_indent": false,
+	"always_show_minimap_viewport": true,
 	"auto_complete": true,
 	"auto_indent": true,
 	"bold_folder_labels": true,
 	"caret_style": "phase",
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/User/MonokaiGray (SL).tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 	"create_window_at_startup": false,
+	"detect_indentation": false,
 	"dictionary": "Packages/Language - English/en_GB.dic",
 	"draw_centered": false,
 	"draw_minimap_border": true,
 	"draw_white_space": "selection",
 	"find_selected_text": true,
+	"fade_fold_buttons": false,
 	"fold_buttons": true,
 	"folder_exclude_patterns":
 	[
@@ -25,7 +29,7 @@
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 14.0,
+	"font_size": 11.0,
 	"gutter": true,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
@@ -39,26 +43,36 @@
 		"UIkit autocomplete",
 		"Modific"
 	],
-	"indent_to_bracket": false,
+	"indent_guide_options":
+	[
+		"draw_active"
+	],
+	"indent_to_bracket": true,
+	"line_padding_bottom": 2,
+	"line_padding_top": 2,
 	"match_brackets_angle": true,
+	"material_theme_bold_tab": true,
+	"material_theme_disable_tree_indicator": true,
+	"material_theme_small_statusbar": true,
+	"material_theme_small_tab": true,
 	"move_to_limit_on_up_down": true,
+	"overlay_scroll_bars": "enabled",
 	"rulers":
 	[
-		72,
-		79
+		80
 	],
 	"scroll_past_end": false,
-	"shift_tab_unindent": true,
+	"shift_tab_unindent": false,
 	"smart_indent": true,
 	"soda_classic_tabs": true,
-	"soda_folder_icons": false,
 	"spell_check": true,
 	"tab_completion": true,
 	"tab_size": 2,
-	"theme": "Spacegray Eighties.sublime-theme",
+	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,
-	"trim_trailing_white_space_on_save": true,
+	"trim_trailing_white_space_on_save": false,
 	"use_tab_stops": true,
+	"wide_caret": true,
 	"word_wrap": true
 }

@@ -6,7 +6,12 @@ Dotfiles are all those files beginning with a "." in your user directory and mak
 ## Installation
 
 ### Using Git and the bootstrap script
-You can clone the repository wherever you want.
+You can clone the repository wherever you want. (I like to keep it in `~/.dotfiles`).
+
+The installation step requires the [XCode Command Line Tools](https://developer.apple.com/downloads), although you *should* be prompted to install these if you don't have them installed already.
+
+### Backups
+Fair warning: The bootstrap script *attempts* to backup existing dotfiles in your HOME directory, but to be safe you should probably make your own copy...
 
 ```sh
 git clone https://github.com/callerc1/dotfiles.git ~/.dotfiles
