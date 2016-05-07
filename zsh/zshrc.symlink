@@ -1,11 +1,5 @@
 
-# Reset Path
-PATH=/usr/bin:/bin:/usr/sbin:/sbin
-export PATH
-
-# Specify homebrew cask defaults
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
+## TODO: move to RMV/env.zsh
 # check for RVM
 if [[ -a ~/.rvm ]]
 then
@@ -14,6 +8,7 @@ then
   source ~/.profile
 fi
 
+## TODO: move to rbenv/env.zsh
 # check for rbenv
 #if [[ -a ~/.rbenv ]]
 #then
@@ -48,7 +43,6 @@ config_files=($DOTFILES/(**|^vendor)/*.zsh)
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}
 do
-  #echo "just path :  $file"
   source $file
 done
 
@@ -69,14 +63,6 @@ compinit
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
 do
-  #echo "just completion :  $file"
-  source $file
-done
-
-# load all the aliases
-for file in ${(M)config_files:#*/aliases.zsh}
-do
-  #echo "just aliases :  $file"
   source $file
 done
 

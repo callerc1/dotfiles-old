@@ -6,15 +6,15 @@
 	"bold_folder_labels": true,
 	"caret_style": "phase",
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
 	"create_window_at_startup": false,
 	"detect_indentation": false,
 	"dictionary": "Packages/Language - English/en_GB.dic",
 	"draw_centered": false,
 	"draw_minimap_border": true,
 	"draw_white_space": "selection",
-	"find_selected_text": true,
 	"fade_fold_buttons": false,
+	"find_selected_text": true,
 	"fold_buttons": true,
 	"folder_exclude_patterns":
 	[
@@ -35,13 +35,6 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"SublimeCodeIntel",
-		"jQuery",
-		"SublimeLinter",
-		"TernJS",
-		"Sublimerge Pro",
-		"UIkit autocomplete",
-		"Modific"
 	],
 	"indent_guide_options":
 	[
@@ -68,7 +61,7 @@
 	"spell_check": true,
 	"tab_completion": true,
 	"tab_size": 2,
-	"theme": "Material-Theme.sublime-theme",
+	"theme": "Material-Theme-Darker.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": false,
