@@ -32,6 +32,9 @@ done
 # include bash aliases (overridden by any ohmyzsh plugins and other aliases)
 . ~/.aliases
 
+# include bash functions
+. ~/.functions
+
 # load everything but the path, completion and aliases files
 for file in ${${${config_files:#*/path.zsh}:#*/completion.zsh}:#*/aliases.zsh}
 do
@@ -49,9 +52,15 @@ do
   source $file
 done
 
+# load all the aliases
+for file in ${(M)config_files:#*/aliases.zsh}
+do
+  #echo "just aliases :  $file"
+  source $file
+done
+
+
 unset config_files
 
-# include bash aliases & functions
-. ~/.aliases
-. ~/.functions
+
 
