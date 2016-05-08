@@ -1,8 +1,8 @@
 [ -n "$PS1" ] && source ~/.bash_profile
 
-## TODO: move to rvm folder
+## TODO: move to common?
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-## TODO: move to rbenv folder
+## TODO: move to common?
 eval "$(rbenv init -)"
 
