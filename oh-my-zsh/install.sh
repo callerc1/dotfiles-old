@@ -15,8 +15,9 @@ if [ ! -d "$VENDOR/oh-my-zsh" ]; then
   git clone https://github.com/robbyrussell/oh-my-zsh.git
   chmod +x $VENDOR/oh-my-zsh/oh-my-zsh.sh
 
-  # Install Theme
-  cp -R $DOTFILES/oh-my-zsh/custom $VENDOR/oh-my-zsh-custom
+  # Install Custom Themes Etc.
+  git clone https://github.com/bhilburn/powerlevel9k.git $VENDOR/oh-my-zsh-custom/themes/powerlevel9k
+  cp -R $DOTFILES/oh-my-zsh/custom/* $VENDOR/oh-my-zsh-custom
 else
   if [ -d "$ZSH" ]; then echo "\033[0;33mYou already have Oh My Zsh installed.\033[0m You'll need to remove $ZSH if you want to install"; else echo "Your oh-my-zsh instalation failed!"; fi
 fi
