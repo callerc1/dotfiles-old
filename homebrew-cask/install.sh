@@ -20,11 +20,14 @@ else
   print_block "Installing Homebrew Cask"
 
   # Install homebrew cask
-  brew install caskroom/cask/brew-cask
+  # brew install caskroom/cask/brew-cask
 
   # Install the versions cask so we can install beta versions of apps
   brew tap caskroom/versions
-
+  
+  # Install the fonts caskroom
+  brew tap caskroom/fonts
+  
   # Install the apps
   sh $DOTFILES/homebrew-cask/update.sh -s
 
