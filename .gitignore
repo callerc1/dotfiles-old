@@ -16,9 +16,10 @@ sublime/User/*
 !sublime/User/*.sublime-keymap
 
 # atom settings
-atom/atom.symlink/.apm
-atom/atom.symlink/.node-gyp
-atom/atom.symlink/compile-cache
-atom/atom.symlink/packages
-atom/atom.symlink/storage
-atom/atom.symlink/themes
+atom/atom.symlink/*
+!atom/atom.symlink/config.cson
+!atom/atom.symlink/init.coffee
+!atom/atom.symlink/keymap.cson
+!atom/atom.symlink/snippets.cson
+!atom/atom.symlink/styles.less
+!atom/atom.symlink/packages.cson

@@ -1,9 +1,8 @@
 "*":
-  "release-notes":
-    viewedVersion: "0.81.0"
-  welcome:
-    showOnStartup: false
+  "atom-material-ui":
+    panelContrast: true
   core:
+    hideGitIgnoredFiles: true
     ignoredNames: [
       ".git"
       ".svn"
@@ -11,18 +10,30 @@
     ]
     themes: [
       "atom-material-ui"
-      "atom-material-syntax"
+      "atom-material-syntax-dark"
     ]
-    hideGitIgnoredFiles: true
-  "atom-material-ui":
-    panelContrast: true
   editor:
-    showIndentGuide: true
-    fontFamily: "Source Code Pro"
+    fontFamily: "Hack"
+    fontSize: 13
     invisibles: {}
+    showIndentGuide: true
     softWrapAtPreferredLineLength: true
-    fontSize: 11
-  "save-session":
-    dataSaveFolder: "~/.atom/packages/save-session/projects"
+  "exception-reporting":
+    userId: "650d0fa9-0c6b-9c49-20c8-f0efe9b6727c"
   minimap:
     absoluteMode: true
+    plugins:
+      pigments: true
+      pigmentsDecorationsZIndex: 0
+  "release-notes":
+    viewedVersion: "0.81.0"
+  "save-session":
+    dataSaveFolder: "~/.atom/packages/save-session/projects"
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
+  welcome:
+    showOnStartup: false
