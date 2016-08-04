@@ -12,6 +12,7 @@ alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C
 alias gloga="git log --oneline --decorate --all --graph --pretty=format:'%C(magenta bold) %h %C(white bold )%an %Creset: %s -%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset'"
 alias gp='git push origin HEAD'
 alias gd='git diff'
+alias gds='git diff --staged'
 alias gc='git commit'
 alias gca='git commit -a'
 alias gco='git checkout'
