@@ -6,7 +6,10 @@ export ZSH=$VENDOR/oh-my-zsh
 export ZSH_CUSTOM=$VENDOR/oh-my-zsh-custom
 
 # Set name of the theme to load.
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel9k/powerlevel9k"
+
+# Powerlevel9k customization
+POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='255'
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
