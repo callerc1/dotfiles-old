@@ -1,6 +1,7 @@
 
 # Communication
 skype
+slack
 
 # Cloud
 dropbox
@@ -15,6 +16,7 @@ vlc
 alfred
 evernote
 things
+spectacle
 
 # System
 flux
@@ -28,6 +30,7 @@ sequel-pro
 sourcetree
 sublime-text3
 transmit
+java
 
 # Fonts
 font-inconsolata-for-powerline
