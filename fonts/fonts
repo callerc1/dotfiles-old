@@ -1,10 +1,15 @@
 
 # Monospace
+font-hack
 font-fira-code
 font-source-code-pro
 
 # Patched
 font-inconsolata-for-powerline
+font-dejavu-sans-mono-for-powerline
+font-inconsolata-for-powerline
+font-meslo-lg-for-powerline
+font-sauce-code-powerline
 
 # Sans-serif
 font-open-sans
