@@ -14,7 +14,28 @@ POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='255'
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(atom bower brew brew-cask bundler colorize composer git-flow git gulp node npm nvm osx rbenv ruby sublime zsh_reload)
+plugins=(
+  $plugins
+  atom
+  bower
+  brew
+  bundler
+  colorize
+  composer
+  docker
+  docker-compose
+  git-flow
+  git
+  gulp
+  node
+  npm
+  nvm
+  osx
+  rbenv
+  ruby
+  sublime
+  zsh_reload
+)
 
 # disable oh-my-zsh updates entirely, only check when running `dot`
 DISABLE_AUTO_UPDATE=true

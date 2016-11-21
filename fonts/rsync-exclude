@@ -1,0 +1,6 @@
+.DS_Store
+*.sh
+*.md
+*.txt
+rsync*
+fonts

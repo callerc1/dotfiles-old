@@ -19,7 +19,6 @@ things
 spectacle
 
 # System
-flux
 hammerspoon
 
 # Dev
@@ -28,7 +27,7 @@ kaleidoscope
 reggy
 sequel-pro
 sourcetree
-sublime-text3
+sublime-text
 transmit
 java
 
@@ -40,7 +39,7 @@ font-dejavu-sans-mono-for-powerline
 font-meslo-lg-for-powerline
 
 # Design
-skyfonts
+monotype-skyfonts
 rightfont
 
 # Browsers

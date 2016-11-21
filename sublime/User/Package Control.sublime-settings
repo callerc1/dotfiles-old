@@ -8,10 +8,12 @@
 		"AdvancedNewFile",
 		"Alignment",
 		"AlignTab",
+		"Alternative Autocompletion",
 		"Ansible",
 		"ApacheConf.tmLanguage",
 		"Autoprefixer",
 		"Babel",
+		"Babel Snippets",
 		"Base16 Color Schemes",
 		"Better CoffeeScript",
 		"Bootstrap 3 Snippets",
@@ -19,6 +21,7 @@
 		"BracketHighlighter",
 		"Color Highlighter",
 		"Comment-Snippets",
+		"Console Wrap for js",
 		"CSS Unminifier",
 		"CSS3",
 		"DevDocs",
@@ -70,9 +73,16 @@
 		"SublimeLinter-jshint",
 		"SublimeLinter-jsxhint",
 		"TabsExtra",
+		"Text Pastry",
 		"Theme - Spacegray",
+		"Twig",
 		"UIkit autocomplete",
 		"Vagrant",
-		"Web Inspector"
+		"Web Inspector",
+		"WordPress"
+	],
+	"repositories":
+	[
+		"https://github.com/titoBouzout/SideBarEnhancements/tree/st3"
 	]
 }
