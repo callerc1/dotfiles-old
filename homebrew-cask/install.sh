@@ -20,7 +20,8 @@ else
   print_block "Installing Homebrew Cask"
 
   # Install homebrew cask
-  brew tap caskroom/cask
+  # brew tap caskroom/cask
+  # Following a change in caskroom from december (https://github.com/caskroom/homebrew-cask#important-december-2015-update-homebrew-cask-will-now-be-kept-up-to-date-together-with-homebrew-see-15381-for-details-if-you-havent-yet-run-brew-uninstall---force-brew-cask-brew-update-to-switch-to-the-new-system) caskroom/cask should no longer be tapped.
 
   # Install the versions cask so we can install beta versions of apps
   brew tap caskroom/versions
