@@ -1,17 +1,27 @@
 #!/bin/sh
 #
+# Installs -
 # Node.js & NPM
-# Installs Node.js & NPM
+# NVM
 #
 ###############################################################################
 
 # Include the general functions
 . ./functions/general
 
-print_block "Installing Node.js"
+# Check for Homebrew
+if ! command_exists brew; then
 
-# Install with homebrew
-brew install node
+  print_error "Nooooooo! Homebrew isn't installed! Can't install Node and NVM."
 
-# Install nvm
-brew install nvm
+else
+
+  print_block "Installing Node.js"
+  # Install with homebrew
+  brew install node
+
+  print_block "Installing NVM"
+  # Install nvm
+  brew install nvm
+
+fi
