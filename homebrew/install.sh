@@ -26,13 +26,10 @@ else
 
 fi
 
-print_line "Installing Homebrew packages"
+print_block "Installing brew packages from Brewfile"
 
-# Install default Homebrew packages
-brew install grc coreutils spark git-extras figlet
-
-# Install services
-brew tap homebrew/services
+echo "› brew bundle -v"
+brew bundle -v
 
 # And we're done
 print_block_end
