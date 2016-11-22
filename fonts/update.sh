@@ -1,5 +1,16 @@
 #!/bin/sh
 # Update required fonts
+#
+
+# Allow using flags when running this script directly
+skipMessages=''
+while getopts 's' flag; do
+  case "${flag}" in
+    s) skipMessages='true' ;;
+    *) error "Unexpected option ${flag}" ;;
+  esac
+done
+
 set -e
 
 # Include the general functions
