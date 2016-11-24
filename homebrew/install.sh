@@ -28,8 +28,8 @@ fi
 
 print_block "Installing brew packages from Brewfile"
 
-echo "› brew bundle -v"
-brew bundle -v
+echo "› brew bundle"
+brew bundle --file=$DOTFILES/homebrew/Brewfile
 
 # And we're done
 print_block_end

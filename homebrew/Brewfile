@@ -1,5 +1,3 @@
-cask_args appdir: '/Applications'
-
 tap 'homebrew/bundle'
 tap 'homebrew/services'
 tap 'homebrew/core'
@@ -34,6 +32,8 @@ brew 'homebrew/php/php55'
 brew 'homebrew/php/composer'
 brew 'homebrew/php/wp-cli'
 
+=begin
+cask_args appdir: '/Applications'
 tap 'caskroom/fonts'
 tap 'caskroom/versions'
 
@@ -52,3 +52,4 @@ cask 'sublime-text'
 cask 'transmit'
 cask 'vlc'
 cask 'java'
+=end
