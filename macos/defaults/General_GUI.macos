@@ -9,8 +9,8 @@ echo "Setting defaults for General UI/UX...";
 #sudo scutil --set LocalHostName "0x6D746873"
 #sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "0x6D746873"
 
-# Disable transparency in the menu bar and elsewhere on Yosemite
-defaults write com.apple.universalaccess reduceTransparency -bool true
+# Disable transparency in the menu bar and elsewhere.
+defaults write com.apple.universalaccess reduceTransparency -bool false
 
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400
@@ -22,7 +22,7 @@ sudo nvram SystemAudioVolume=" "
 defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  HH:mm:ss"
 
 # Menu bar: disable transparency
-defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
+defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool true
 
 # Menu bar: hide the Time Machine, Volume, User, and Bluetooth icons
 for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
