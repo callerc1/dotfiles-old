@@ -28,8 +28,8 @@ print_block "Installing native applications"
 # Make sure we have the latest and greatest
 brew upgrade brew-cask 2> /dev/null
 
-# Install apps to /Applications (Default is: /Users/$user/Applications)
-appdir="/Applications"
+# changes the path where the applications will be moved (Default is /Applications)
+#appdir="/Applications"
 
 # get currently installed apps
 installedApps=( $(brew cask list) )
