@@ -3,6 +3,7 @@
 # Installs -
 # Node.js & NPM
 # NVM
+# Yarn
 #
 ###############################################################################
 
@@ -12,7 +13,7 @@
 # Check for Homebrew
 if ! command_exists brew; then
 
-  print_error "Nooooooo! Homebrew isn't installed! Can't install Node and NVM."
+  print_error "Nooooooo! Homebrew isn't installed! Can't install Node, NVM or Yarn"
 
 else
 
@@ -23,5 +24,12 @@ else
   print_block "Installing NVM"
   # Install nvm
   brew install nvm
+
+  print_block "Installing Yarn"
+  # Install yarn
+  brew install yarn
+
+  # Run updates
+  sh $DOTFILES/node/update.sh -s
 
 fi

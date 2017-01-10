@@ -1,2 +1,2 @@
-export EDITOR='vi'
+export EDITOR='atom'
 export GITGUI='SourceTree'
