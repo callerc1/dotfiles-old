@@ -11,7 +11,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Powerlevel9k customization
 # Force context to "caller(c1)" for when default user matches current user.
 if [[ "$ZSH_THEME" == "powerlevel9k/powerlevel9k" ]]; then
-  DEFAULT_USER='callerc1'
+  DEFAULT_USER=$USER
   if [[ "$USER" == "$DEFAULT_USER" ]]; then
       POWERLEVEL9K_CONTEXT_TEMPLATE='caller(c1)'
   fi
