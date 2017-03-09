@@ -9,7 +9,16 @@ export ZSH_CUSTOM=$VENDOR/oh-my-zsh-custom
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Powerlevel9k customization
-POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='255'
+# Force USER to "caller(c1)" for when default user.
+if [[ "$ZSH_THEME" == "powerlevel9k/powerlevel9k" ]]; then
+  DEFAULT_USER='caller(c1)'
+  if [[ "$USER" != "$DEFAULT_USER" ]]; then
+      USER='caller(c1)'
+  fi
+  DEFAULT_USER=$USER
+  POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='255'
+  POWERLEVEL9K_ALWAYS_SHOW_USER=true
+fi
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
