@@ -9,15 +9,21 @@ export ZSH_CUSTOM=$VENDOR/oh-my-zsh-custom
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Powerlevel9k customization
-# Force USER to "caller(c1)" for when default user.
+# Force context to "caller(c1)" for when default user matches current user.
 if [[ "$ZSH_THEME" == "powerlevel9k/powerlevel9k" ]]; then
-  DEFAULT_USER='caller(c1)'
-  if [[ "$USER" != "$DEFAULT_USER" ]]; then
-      USER='caller(c1)'
+  DEFAULT_USER='callerc1'
+  if [[ "$USER" == "$DEFAULT_USER" ]]; then
+      POWERLEVEL9K_CONTEXT_TEMPLATE='caller(c1)'
   fi
-  DEFAULT_USER=$USER
+  POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ssh dir rbenv vcs)
+  POWERLEVEL9K_SSH_BACKGROUND='yellow'
+  POWERLEVEL9K_SSH_FOREGROUND='$DEFAULT_COLOR'
+  POWERLEVEL9K_MODE='awesome-patched'
   POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='255'
-  POWERLEVEL9K_ALWAYS_SHOW_USER=true
+  POWERLEVEL9K_HOME_ICON=''
+  POWERLEVEL9K_HOME_SUB_ICON=''
+  POWERLEVEL9K_FOLDER_ICON=''
+  POWERLEVEL9K_ALWAYS_SHOW_CONTEXT=true
 fi
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
