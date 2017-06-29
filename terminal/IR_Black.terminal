@@ -180,17 +180,21 @@
 	<data>
 	YnBsaXN0MDDUAQIDBAUGGBlYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
 	AAGGoKQHCBESVSRudWxs1AkKCwwNDg8QVk5TU2l6ZVhOU2ZGbGFnc1ZOU05hbWVWJGNs
-	YXNzI0AqAAAAAAAAEBCAAoADXxAaSW5jb25zb2xhdGEtZHpGb3JQb3dlcmxpbmXSExQV
-	FlokY2xhc3NuYW1lWCRjbGFzc2VzVk5TRm9udKIVF1hOU09iamVjdF8QD05TS2V5ZWRB
-	cmNoaXZlctEaG1Ryb290gAEIERojLTI3PEJLUltiaXJ0dniVmqWutbjB09bbAAAAAAAA
-	AQEAAAAAAAAAHAAAAAAAAAAAAAAAAAAAAN0=
+	YXNzI0AoAAAAAAAAEBCAAoADXxAXRGVqYVZ1U2Fuc01vbm9Qb3dlcmxpbmXSExQVFlok
+	Y2xhc3NuYW1lWCRjbGFzc2VzVk5TRm9udKIVF1hOU09iamVjdF8QD05TS2V5ZWRBcmNo
+	aXZlctEaG1Ryb290gAEIERojLTI3PEJLUltiaXJ0dniSl6KrsrW+0NPYAAAAAAAAAQEA
+	AAAAAAAAHAAAAAAAAAAAAAAAAAAAANo=
 	</data>
 	<key>FontAntialias</key>
 	<true/>
+	<key>FontHeightSpacing</key>
+	<real>1</real>
+	<key>FontWidthSpacing</key>
+	<real>1</real>
 	<key>Linewrap</key>
 	<true/>
 	<key>ProfileCurrentVersion</key>
-	<real>2.02</real>
+	<real>2.0499999999999998</real>
 	<key>RunCommandAsShell</key>
 	<true/>
 	<key>SelectionColor</key>
@@ -202,6 +206,8 @@
 	FxhUcm9vdIABCBEaIy0yNztBSE5bYoiKjJGcpa2wucvO0wAAAAAAAAEBAAAAAAAAABkA
 	AAAAAAAAAAAAAAAAAADV
 	</data>
+	<key>SetLanguageEnvironmentVariables</key>
+	<true/>
 	<key>ShouldLimitScrollback</key>
 	<integer>0</integer>
 	<key>ShowActiveProcessInTitle</key>
@@ -239,8 +245,6 @@
 	<true/>
 	<key>UseBrightBold</key>
 	<true/>
-	<key>VisualBell</key>
-	<false/>
 	<key>blackColour</key>
 	<data>
 	BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2JqZWN0AIWEAWMBhARm
@@ -321,14 +325,6 @@
 		<string>[33~</string>
 		<key>$F70F</key>
 		<string>[34~</string>
-		<key>$F729</key>
-		<string>[H</string>
-		<key>$F72B</key>
-		<string>[F</string>
-		<key>$F72C</key>
-		<string>[5~</string>
-		<key>$F72D</key>
-		<string>[6~</string>
 		<key>F704</key>
 		<string>OP</string>
 		<key>F705</key>
@@ -375,10 +371,6 @@
 		<string>[H</string>
 		<key>F72B</key>
 		<string>[F</string>
-		<key>F72C</key>
-		<string>scrollPageUp:</string>
-		<key>F72D</key>
-		<string>scrollPageDown:</string>
 		<key>^F702</key>
 		<string>[5D</string>
 		<key>^F703</key>
