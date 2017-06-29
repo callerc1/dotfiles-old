@@ -39,6 +39,7 @@ cd; curl -#L https://github.com/callerc1/dotfiles/tarball/master | tar -xzv --st
 script/bootstrap
 ```
 
+### New Machine Install
 
 ## Topical
 
