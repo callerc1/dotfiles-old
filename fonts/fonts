@@ -3,13 +3,28 @@
 font-hack
 font-fira-code
 font-source-code-pro
+font-robotomono-nerd-font
+font-sourcecodepro-nerd-font
+font-robotomono-nerd-font-mono
+font-sourcecodepro-nerd-font-mono
+font-dejavusansmono-nerd-font-mono
+font-droidsansmono-nerd-font-mono
+font-fantasquesansmono-nerd-font-mono
+font-meslo-nerd-font-mono
+font-dejavusansmono-nerd-font
+font-droidsansmono-nerd-font
+font-fantasquesansmono-nerd-font
+font-meslo-lg
+font-meslo-nerd-font
 
 # Patched
 font-inconsolata-for-powerline
 font-dejavu-sans-mono-for-powerline
 font-inconsolata-for-powerline
-font-meslo-lg-for-powerline
-font-sauce-code-powerline
+font-meslo-for-powerline
+font-source-code-pro-for-powerline
+font-awesome-terminal-fonts
+
 
 # Sans-serif
 font-open-sans
