@@ -16,21 +16,36 @@
   .list-tree {
     li:not(.list-nested-item):not(.tabBlender),
     li.list-nested-item > .list-item {
-      line-height: 2.25;
+      line-height: 2.5;
     }
+  }
+  .list-group .selected::before, .list-tree .selected::before {
+    height: 25px;
   }
 }
 
-// Show solid VCS dot on left of tab-bar if file is modified but not saved
-.tab-bar {
-  .tab .title[class*="status-"] {
-    padding-left: 1.2rem;
-  }
-  .tab .title::after {
-    display: none;
-    opacity: .7;
-  }
-  .tab.modified .title::after {
-    display: block;
-  }
+.tab-bar .tab {
+  -webkit-flex: 1;
+  flex: 1;
+  min-width: 10%;
 }
+
+// Show solid VCS dot on left of tab-bar if file is modified but not saved
+// .tab-bar {
+//   .tab .title[class*="status-"] {
+//     padding-left: 1.5rem;
+//     &:after {
+//       content: "";
+//       height: 8px;
+//       width: 8px;
+//       border-radius: 8px;
+//       background: #FFCA28;
+//       position: absolute;
+//       font-family: "Octicons Regular";
+//       font-size: 16px;
+//       margin-top: -2px;
+//       top: 50%;
+//       left: 0;
+//     }
+//   }
+// }
