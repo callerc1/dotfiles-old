@@ -1,6 +1,6 @@
 
 # Communication
-skype
+#skype
 slack
 
 # Cloud
@@ -8,39 +8,46 @@ dropbox
 google-drive
 
 # Media
-spotify
+#spotify
 vlc
 
 # Productivity
 1password
-alfred
-evernote
-things
+#alfred
+#evernote
+#things
 spectacle
 
 # System
-hammerspoon
+#hammerspoon
 
 # Dev
+atom
 iterm2
-kaleidoscope
-reggy
-sequel-pro
-sourcetree
+#kaleidoscope
+#reggy
+#sequel-pro
+#sourcetree
 sublime-text
-transmit
+#transmit
 java
+vagrant
+virtualbox
+visual-studio-code
 
 # Design
-monotype-skyfonts
-rightfont
+sketch
+figma
+skyfonts
+#rightfont
 
 # Browsers
 firefox
-firefoxdeveloperedition
+#firefoxdeveloperedition
 google-chrome
-google-chrome-canary
-opera
+#google-chrome-canary
+#opera
 
 # Utilities
-the-unarchiver
+#the-unarchiver
+malwarebytes-anti-malware
