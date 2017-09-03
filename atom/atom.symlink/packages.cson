@@ -1,7 +1,6 @@
 packages: [
   "activate-power-mode"
   "atom-beautify"
-  "atom-jade"
   "atom-material-syntax"
   "atom-material-syntax-dark"
   "atom-material-ui"
@@ -15,6 +14,7 @@ packages: [
   "flow-ide"
   "goto-definition"
   "highlight-selected"
+  "hyperclick"
   "intentions"
   "language-javascript-jsx"
   "language-lua"
@@ -31,6 +31,7 @@ packages: [
   "package-sync"
   "pigments"
   "pinned-tabs"
+  "prettier-atom"
   "react"
   "save-session"
   "set-syntax"

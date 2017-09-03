@@ -5,10 +5,13 @@
   "atom-beautify":
     general:
       _analyticsUserId: "d8b4d737-0dae-424e-afd4-918620ff6581"
+    js:
+      indent_level: 4
   "atom-material-ui":
     colors:
       abaseColor: "#7e57c2"
-      accentColor: "#b0e457"
+      accentColor: "#acdd55"
+      genAccent: true
       predefinedColor: "Purple"
     fonts:
       fontSize: 15
@@ -22,6 +25,8 @@
   core:
     disabledPackages: [
       "activate-power-mode"
+      "whitespace"
+      "linter-flow"
     ]
     hideGitIgnoredFiles: true
     ignoredNames: [
@@ -55,6 +60,7 @@
     noConfigDisable: true
   "linter-ui-default":
     panelHeight: 81
+    showPanel: true
   minimap:
     plugins:
       "highlight-selected": true
@@ -62,6 +68,15 @@
   "package-sync":
     createOnChange: true
     forceOverwrite: true
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+      showInStatusBar: true
+    prettierEslintOptions: {}
+    prettierOptions:
+      singleQuote: true
+      trailingComma: "all"
+    useEslint: true
   "release-notes":
     viewedVersion: "0.81.0"
   "save-session":
