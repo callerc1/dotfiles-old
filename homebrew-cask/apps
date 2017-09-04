@@ -1,15 +1,13 @@
 
 # Communication
-#skype
 slack
 
 # Cloud
 dropbox
-google-drive
 
 # Media
 #spotify
-vlc
+#vlc
 
 # Productivity
 1password
@@ -30,21 +28,21 @@ iterm2
 #sourcetree
 sublime-text
 #transmit
-java
-vagrant
-virtualbox
+#java
+#vagrant
+#virtualbox
 visual-studio-code
 
 # Design
 sketch
 figma
-skyfonts
+#skyfonts
 #rightfont
 
 # Browsers
 firefox
-#firefoxdeveloperedition
 google-chrome
+#firefoxdeveloperedition
 #google-chrome-canary
 #opera
 
