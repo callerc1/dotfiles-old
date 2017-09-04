@@ -33,7 +33,6 @@ packages: [
   "pinned-tabs"
   "prettier-atom"
   "react"
-  "save-session"
   "set-syntax"
   "sort-lines"
   "Sublime-Style-Column-Selection"
