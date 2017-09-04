@@ -10,25 +10,24 @@ You can clone the repository wherever you want. (I like to keep it in `~/.dotfil
 
 The installation step requires the [XCode Command Line Tools](https://developer.apple.com/downloads), although you *should* be prompted to install these if you don't have them installed already.
 
-### Backups
-Fair warning: The bootstrap script *attempts* to backup existing dotfiles in your HOME directory, but to be safe you should probably make your own copy...
-
 ```sh
 git clone https://github.com/callerc1/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 ```
 
-This will symlink the appropriate files in `.dotfiles` to your home directory.
+### Bootstrap and Backups
+The bootstrap script will symlink the appropriate files in `.dotfiles` to your home directory.
 Everything is configured and tweaked within `~/.dotfiles`.
 
 The main file you'll want to change right off the bat is `zsh/zshrc.symlink`,
 which sets up a few paths that'll be different on your particular machine.
 
+Fair warning: The bootstrap script *attempts* to backup existing dotfiles in your HOME directory, but to be safe you should probably make your own copy...
+
 `dot` installs some dependencies, sets sane OS X defaults, and so on.
 Tweak this script, and occasionally run `dot` from time to time to keep
 your environment fresh and up-to-date. You can find this script in `bin/`.
-
 
 ### Git-free install
 
@@ -39,7 +38,10 @@ cd; curl -#L https://github.com/callerc1/dotfiles/tarball/master | tar -xzv --st
 script/bootstrap
 ```
 
-### New Machine Install
+### Install
+```bash
+  script/install
+```
 
 ## Topical
 
