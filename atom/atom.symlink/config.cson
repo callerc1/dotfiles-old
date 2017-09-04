@@ -28,7 +28,7 @@
       "whitespace"
       "linter-flow"
     ]
-    hideGitIgnoredFiles: true
+    hideGitIgnoredFiles: false
     ignoredNames: [
       ".git"
       ".svn"
@@ -52,6 +52,8 @@
   "exception-reporting":
     userId: "b0906014-73da-d10c-12de-a343fd7f4e2a"
   "file-icons": {}
+  hyperclick:
+    darwinTriggerKeys: "altKey,metaKey"
   linter: {}
   "linter-eslint":
     eslintrcPath: "~/.eslintrc"
