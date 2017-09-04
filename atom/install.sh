@@ -18,7 +18,6 @@ if ! command_exists apm; then
 else
 
   print_block "Installing Atom Packages"
-  # Install with homebrew
   apm install --packages-file ${DOTFILES}/atom/packages.list
 
 fi
