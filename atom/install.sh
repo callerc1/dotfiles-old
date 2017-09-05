@@ -18,6 +18,29 @@ if ! command_exists apm; then
 else
 
   print_block "Installing Atom Packages"
-  apm install --packages-file ${DOTFILES}/atom/packages.list
+
+  # Creat packages file from packages.cson
+  # packages.cson is source of truth
+  file=`cat ${DOTFILES}/atom/atom.symlink/packages.cson`
+  packagesFile=${DOTFILES}/atom/packages
+
+  rm -f $packagesFile && touch $packagesFile
+  for line in $file; do
+    # check line starts with "
+    if [[ $line = \"* ]] ; then
+      # remove "" from package name and apend to packages file
+      packageName=$(sed -e 's/^"//' -e 's/"$//' <<<"$line")
+      echo $packageName >> $packagesFile
+    fi
+  done
+  #echo `cat $packagesFile`;
+
+  # Install the packages
+  apm install --packages-file $packagesFile
+
+  # potentially it might be better to just add the package-sync package to atom here via apm and then run the sync command within atom?
+  # https://github.com/lee-dohm/package-sync
+  #
+  # or maybe we can remove the package-sync dependancy entirely and rely on our `dot` command to sync?
 
 fi
