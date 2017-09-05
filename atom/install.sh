@@ -23,7 +23,7 @@ else
   # packages.cson is source of truth as atom updates this when we add/remove packages
   # This is just a hacky way to install all atom packages via dotfiles install
   file=`cat ${DOTFILES}/atom/atom.symlink/packages.cson`
-  packagesFile=${DOTFILES}/atom/packages
+  packagesFile=${DOTFILES}/atom/.packages
 
   rm -f $packagesFile && touch $packagesFile
   for line in $file; do
