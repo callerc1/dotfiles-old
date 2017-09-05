@@ -19,8 +19,9 @@ else
 
   print_block "Installing Atom Packages"
 
-  # Creat packages file from packages.cson
-  # packages.cson is source of truth
+  # Create packages file from packages.cson
+  # packages.cson is source of truth as atom updates this when we add/remove packages
+  # This is just a hacky way to install all atom packages via dotfiles install
   file=`cat ${DOTFILES}/atom/atom.symlink/packages.cson`
   packagesFile=${DOTFILES}/atom/packages
 
@@ -40,7 +41,5 @@ else
 
   # potentially it might be better to just add the package-sync package to atom here via apm and then run the sync command within atom?
   # https://github.com/lee-dohm/package-sync
-  #
-  # or maybe we can remove the package-sync dependancy entirely and rely on our `dot` command to sync?
 
 fi
