@@ -24,6 +24,11 @@ if [[ "$ZSH_THEME" == "powerlevel9k/powerlevel9k" ]]; then
   POWERLEVEL9K_HOME_SUB_ICON=''
   POWERLEVEL9K_FOLDER_ICON=''
   POWERLEVEL9K_ALWAYS_SHOW_CONTEXT=true
+  POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+  POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
+  POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+  POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
+  POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%K{000}%F{255} ↳ 🍕 %K{'NONE'}%F{000}%{ %}%K{'NONE'}%F{255}'
 fi
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
