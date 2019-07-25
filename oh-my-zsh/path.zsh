@@ -55,6 +55,7 @@ plugins=(
   ruby
   sublime
   zsh_reload
+  thefuck
 )
 
 # disable oh-my-zsh updates entirely, only check when running `dot`
