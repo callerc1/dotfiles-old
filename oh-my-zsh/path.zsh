@@ -28,32 +28,30 @@ if [[ "$ZSH_THEME" == "powerlevel9k/powerlevel9k" ]]; then
   POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
   POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
   POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
-  POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%K{000}%F{255} ↳ 🍕 %K{'NONE'}%F{000}%{ %}%K{'NONE'}%F{255}'
+  POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%K{000}%F{255} ↳ 🍕 %K{'NONE'}%F{000}% {%}%K{'NONE'}%F{255}'
 fi
+
+source $ZSH/oh-my-zsh.sh
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
   $plugins
-  atom
-  bower
-  brew
-  bundler
+  #bundler
   colorize
   composer
   docker
   docker-compose
   git-flow
   git
-  gulp
   node
   npm
-  nvm
-  osx
-  rbenv
-  ruby
-  sublime
+  #nvm
+  #osx
+  #rbenv
+  #ruby
+  #sublime
   zsh_reload
   thefuck
 )
