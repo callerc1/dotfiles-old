@@ -7,7 +7,7 @@
 
 [user]
   name = AUTHORNAME
-  email = AUTHOREMAIL
+  useconfigonly = true
 
 [credential]
     helper = GIT_CREDENTIAL_HELPER
@@ -204,3 +204,6 @@
     #
     # Setting to git 2.0 default to surpress warning message
     default = simple
+
+[rebase]
+	autosquash = true
