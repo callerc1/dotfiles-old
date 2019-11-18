@@ -1,11 +1,11 @@
 #!/bin/sh
-# Update node
+# Update Node global node_modules
 set -e
 
 # Include the general functions
 . ./functions/general
 
-print_block "Updating node"
+print_block "Updating Node.js global modules"
 
 DOTFILES_NODE_DIR="$DOTFILES/node"
 

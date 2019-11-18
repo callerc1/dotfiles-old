@@ -33,3 +33,6 @@ else
   sh $DOTFILES/node/update.sh -s
 
 fi
+
+# And we're done
+print_block_end
