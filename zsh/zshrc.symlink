@@ -1,10 +1,10 @@
 # Profiling
+# Run this to check time : `for i in $(seq 1 10); do /usr/bin/time $SHELL -i -c exit; done`
 #zmodload zsh/zprof
 
-# Base16 Shell
-# BASE16_SHELL="$DOTFILES/zsh/base16-ocean.dark.sh"
-# [[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
-
+export LC_CTYPE="en_GB.UTF-8"
+export LC_ALL="en_GB.UTF-8"
+export LANG="en_GB"
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
@@ -62,62 +62,11 @@ do
   source $file
 done
 
-
 unset config_files
 
-function rapid-load-nvm () {
-  # https://github.com/nylen/dotfiles/blob/d41be5a9286ca2cc6f7332a1c91b4fc0c9066830/.bashrc_nylen_dotfiles#L265
-  # Load nvm if present
-  export NVM_DIR="$HOME/.nvm"
-  if [ -s "/usr/local/opt/nvm/nvm.sh" ]; then
-      # Load nvm but don't use it yet: we need to do some other hacks first.
-      # See https://github.com/creationix/nvm/issues/1261#issuecomment-366879288
-      . "/usr/local/opt/nvm/nvm.sh" --no-use
-
-      # I don't need this check, and it's slow (loads npm).
-      # Do not use the npm `prefix` config; do not report related bugs to nvm ;)
-      nvm_die_on_prefix() {
-          return 0
-      }
-      # This also loads npm; let's just skip it.
-      nvm_print_npm_version() {
-          return 0
-      }
-      # nvm_resolve_local_alias can also be slow; cache it.
-      if [ -f "$NVM_DIR/_default_version" ]; then
-          NVM_AUTO_LOAD_VERSION=$(cat "$NVM_DIR/_default_version")
-      fi
-      if [ -z "$NVM_AUTO_LOAD_VERSION" ]; then
-          NVM_AUTO_LOAD_VERSION=$(nvm_resolve_local_alias default)
-      fi
-      if [ -n "$NVM_AUTO_LOAD_VERSION" ]; then
-          echo "$NVM_AUTO_LOAD_VERSION" > "$NVM_DIR/_default_version"
-          nvm use --silent "$NVM_AUTO_LOAD_VERSION"
-      fi
-  fi
-
-}
 # Lazy Load NVM
-function load-nvm () {
-  if [[ $OSTYPE == "darwin"* ]]; then
-   echo "dude"
-    export NVM_DIR=~/.nvm
-    [[ -s $(brew --prefix nvm)/nvm.sh ]] && source $(brew --prefix nvm)/nvm.sh
-  else
-    [[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
-  fi
-}
-
-load-nvmrc() {
-  if [[ -f .nvmrc && -r .nvmrc ]]; then
-    if ! type nvm >/dev/null; then
-      rapid-load-nvm
-    fi
-    nvm use
-  fi
-}
+. $DOTFILES/functions/lazy-nvm
 add-zsh-hook chpwd load-nvmrc
 
 # Profiling
 #zprof
-
