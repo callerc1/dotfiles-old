@@ -1,56 +1,78 @@
-tap 'homebrew/bundle'
-tap 'homebrew/services'
-tap 'homebrew/core'
-# tap 'homebrew/php'
-
-brew 'grc'
-brew 'coreutils'
-brew 'git-extras'
-brew 'figlet'
-brew 'spark'
-
-# brew 'git-flow'
-# brew 'ansible'
-# brew 'git'
-# brew 'go'
-# brew 'gradle'
-# brew 'groovy'
-# brew 'ruby'
-# brew 'heroku'
-# brew 'jenv'
-# brew 'node'
-# brew 'nvm'
-# brew 'rbenv'
-# brew 'tmux'
-# brew 'unrar'
-# brew 'wget'
-# brew 'mongodb'
-# brew 'mysql', restart_service: true
-# brew 'pow'
-# brew 'ruby-build'
-# brew 'lua'
-# brew 'homebrew/php/php55'
-# brew 'homebrew/php/composer'
-# brew 'homebrew/php/wp-cli'
-
-
-# cask_args appdir: '/Applications'
-# tap 'caskroom/fonts'
-# tap 'caskroom/versions'
-
-# cask '1password'
-# cask 'dropbox'
-# cask 'firefox'
-# cask 'google-chrome'
-# cask 'google-drive'
-# cask 'iterm2'
-# cask 'sequel-pro'
-# cask 'skyfonts'
-# cask 'slack'
-# cask 'spectacle'
-# cask 'spotify'
-# cask 'sublime-text'
-# cask 'transmit'
-# cask 'vlc'
-# cask 'java'
-
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "yleisradio/terraforms"
+brew "coreutils"
+brew "figlet"
+brew "git-extras"
+brew "go"
+brew "grc"
+brew "hub"
+brew "jq"
+brew "kubernetes-cli"
+brew "mas"
+brew "node"
+brew "nvm"
+brew "postgresql"
+brew "spark"
+brew "thefuck"
+brew "watchexec"
+brew "watchman"
+brew "yarn"
+brew "yleisradio/terraforms/chtf"
+cask "1password"
+cask "atom"
+cask "balenaetcher"
+cask "dropbox"
+cask "figma"
+cask "firefox"
+cask "font-awesome-terminal-fonts"
+cask "font-dejavu-sans-mono-for-powerline"
+cask "font-dejavusansmono-nerd-font"
+cask "font-dejavusansmono-nerd-font-mono"
+cask "font-droidsansmono-nerd-font"
+cask "font-droidsansmono-nerd-font-mono"
+cask "font-fantasquesansmono-nerd-font"
+cask "font-fantasquesansmono-nerd-font-mono"
+cask "font-fira-code"
+cask "font-hack"
+cask "font-hack-nerd-font"
+cask "font-hack-nerd-font-mono"
+cask "font-inconsolata-for-powerline"
+cask "font-meslo-for-powerline"
+cask "font-meslo-lg"
+cask "font-meslo-nerd-font"
+cask "font-meslo-nerd-font-mono"
+cask "font-open-sans"
+cask "font-robotomono-nerd-font"
+cask "font-robotomono-nerd-font-mono"
+cask "font-source-code-pro"
+cask "font-source-code-pro-for-powerline"
+cask "font-sourcecodepro-nerd-font"
+cask "font-sourcecodepro-nerd-font-mono"
+cask "google-chrome"
+cask "google-cloud-sdk"
+cask "iterm2"
+cask "mono-mdk"
+cask "ngrok"
+cask "pock"
+cask "postman"
+cask "sketch"
+cask "slack"
+cask "spectacle"
+cask "sublime-text"
+cask "tableplus"
+cask "visual-studio-code"
+cask "whatsapp"
+cask "yleisradio/terraforms/terraform-0.11.14"
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "NordVPN IKE", id: 1116599239
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Things", id: 904280696
+mas "Xcode", id: 497799835
