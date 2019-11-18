@@ -137,15 +137,13 @@ install_run () {
 
 install_run_all () {
   local install_scripts=('./homebrew/install.sh')
-  install_scripts+=($(find . -name install.sh -not -path "./vendor/*" -not -path "./homebrew/*" -not -path "./homebrew-cask/*"  ) )
-  install_scripts+=('./homebrew-cask/install.sh')
+  install_scripts+=($(find . -name install.sh -not -path "./vendor/*" -not -path "./homebrew/*"))
   local install_all=false always_skip_all=false skip_all=false
 
   for install_script in "${install_scripts[@]}"; do
     install_get_topic_name $install_script
     install_run $install_script $script_name
   done
-
 }
 
 # Install all the things!
