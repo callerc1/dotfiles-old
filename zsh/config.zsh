@@ -53,3 +53,4 @@ COMPLETION_WAITING_DOTS="true"
 
 # turn off auto-correct
 unsetopt correct_all
+unsetopt correct
