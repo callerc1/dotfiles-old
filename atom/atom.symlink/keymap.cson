@@ -1,3 +1,0 @@
-# Add custom keymap stuff here.
-'atom-workspace, atom-workspace atom-text-editor':
-  'cmd-shift-M': 'markdown-preview:toggle'
